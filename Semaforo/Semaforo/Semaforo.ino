@@ -1,28 +1,32 @@
 
-  int greenLedPin = 2;
-  int yellowLedPin = 1;
-  int redLedPin = 0;
+  int greenLedPin = 3;
+  int yellowLedPin = 2;
+  int redLedPin = 1;
   
 void setup() {
 
 }
 
 void loop() {
-   
+  semaforoLigado();
+  digitalWrite(redLedPin,LOW);
+}
+
+void semaforoLigado(){
+       
   digitalWrite(redLedPin, LOW); 
   digitalWrite(yellowLedPin, LOW);
   digitalWrite(greenLedPin, HIGH);
-  delay(2000);    // wait 2 seconds
+  delay(2000); 
   
   digitalWrite(redLedPin, LOW); 
   digitalWrite(yellowLedPin, HIGH);
   digitalWrite(greenLedPin, LOW);
-  delay(1000);   // wait 1 second
+  delay(1000);   
   
-  // turn the red LED on and the other LEDs off
+
   digitalWrite(redLedPin, HIGH); 
   digitalWrite(yellowLedPin, LOW);
   digitalWrite(greenLedPin, LOW);
-  delay(3000);  // wait 3 seconds   
-
-}
+  delay(3000);    
+} 
