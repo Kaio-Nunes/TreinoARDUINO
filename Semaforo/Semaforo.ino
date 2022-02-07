@@ -1,7 +1,7 @@
 
-#define pinGreenLED 3
-#define pinYellowLED 2
-#define pinRedLED 1
+#define pinGreenLED 13
+#define pinYellowLED 12
+#define pinRedLED 11
   
 void setup() {
 pinMode(pinGreenLED, INPUT);
@@ -37,6 +37,7 @@ void semaforoPiscaAlerta(){
   digitalWrite(pinGreenLED, LOW);
   digitalWrite(pinRedLED, LOW);
   digitalWrite(pinYellowLED, LOW);
-  delay(1000);
+  delay(500);
   digitalWrite(pinYellowLED, HIGH);
+  delay(500);
   }
