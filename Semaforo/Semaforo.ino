@@ -4,9 +4,9 @@
 #define pinRedLED 1
   
 void setup() {
-pinMode(3, INPUT);
-pinMode(2, INPUT);
-pinMode(1, INPUT);
+pinMode(pinGreenLED, INPUT);
+pinMode(pinYellowLED, INPUT);
+pinMode(pinRedLED, INPUT);
 }
 
 void loop() {
@@ -36,7 +36,7 @@ void semaforoLigado(){
 void semaforoPiscaAlerta(){
   digitalWrite(pinGreenLED, LOW);
   digitalWrite(pinRedLED, LOW);
-  digitalWrite(pinYellowLED, HIGH);
+  digitalWrite(pinYellowLED, LOW);
   delay(1000);
-  semaforoPiscaAlerta();
+  digitalWrite(pinYellowLED, HIGH);
   }
